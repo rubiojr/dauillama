@@ -4,6 +4,6 @@ Type=Application
 Name=Feeel
 Comment=Ollama desktop frontend
 Categories=Education;Utility;
-Icon=bz.rxla.dauillama.png
+Icon=bz.rxla.dauillama
 Exec=dauillama
 StartupWMClass=dauillama
