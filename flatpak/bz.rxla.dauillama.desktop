@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Feeel
+Comment=Ollama desktop frontend
+Categories=Education;Utility;
+Icon=bz.rxla.dauillama.png
+Exec=dauillama
+StartupWMClass=dauillama
