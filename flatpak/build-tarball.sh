@@ -23,6 +23,7 @@ OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://127.0.0.1:11434/api}
 echo "OLLAMA_BASE_URL=$OLLAMA_BASE_URL"
 flutter build linux --dart-define="OLLAMA_BASE_URL=$OLLAMA_BASE_URL" --release
 cp flatpak/bz.rxla.dauillama.desktop "$BUNDLE"
+cp flatpak/bz.rxla.dauillama.png "$BUNDLE/icon.png"
 tar -C "$BUNDLE" --transform 's,^,dauillama/,' -czf "$TARBALL" .
 
 sha256sum "$TARBALL"
