@@ -17,10 +17,8 @@ enum Table { conversation }
 
 /// sqlite DB abstraction
 Future<Database> initDB() async {
-  final path = join(await getDatabasesPath(), dbPath);
-  _log.info('DbPath : $path');
-
   var path;
+
   if (Platform.isLinux) {
     sqflite_ffi.sqfliteFfiInit();
     databaseFactory = sqflite_ffi.databaseFactoryFfi;
@@ -28,6 +26,8 @@ Future<Database> initDB() async {
   } else {
     path = join(await getDatabasesPath(), dbPath);
   }
+
+  _log.info('DbPath : $path');
 
   return openDatabase(
     join(path),
